@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Caracteristicas:</b>
+  <%= @field.caracteristicas %>
+</p>
+
+<p>
+  <b>Dia:</b>
+  <%= @field.dia %>
+</p>
+
+<p>
+  <b>Horas atencion:</b>
+  <%= @field.horas_atencion %>
+</p>
+
+<p>
+  <b>Tarifa:</b>
+  <%= @field.tarifa %>
+</p>
+
+<p>
+  <b>Turno:</b>
+  <%= @field.turno %>
+</p>
+
+<p>
+  <b>Promocion:</b>
+  <%= @field.promocion %>
+</p>
+
+<p>
+  <b>Imagen:</b>
+  <%= @field.imagen %>
+</p>
+
+
+<%= link_to 'Edit', edit_field_path(@field) %> |
+<%= link_to 'Back', fields_path %>

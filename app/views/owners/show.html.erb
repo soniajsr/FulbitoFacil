@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nombres:</b>
+  <%= @owner.nombres %>
+</p>
+
+<p>
+  <b>Ap paterno:</b>
+  <%= @owner.ap_paterno %>
+</p>
+
+<p>
+  <b>Ap materno:</b>
+  <%= @owner.ap_materno %>
+</p>
+
+<p>
+  <b>Sexo:</b>
+  <%= @owner.sexo %>
+</p>
+
+<p>
+  <b>Tipo doc:</b>
+  <%= @owner.tipo_doc %>
+</p>
+
+<p>
+  <b>Nro doc:</b>
+  <%= @owner.nro_doc %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @owner.email %>
+</p>
+
+<p>
+  <b>Password:</b>
+  <%= @owner.password %>
+</p>
+
+<p>
+  <b>Fch nacimiento:</b>
+  <%= @owner.fch_nacimiento %>
+</p>
+
+<p>
+  <b>Telefono:</b>
+  <%= @owner.telefono %>
+</p>
+
+
+<%= link_to 'Edit', edit_owner_path(@owner) %> |
+<%= link_to 'Back', owners_path %>

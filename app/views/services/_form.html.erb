@@ -1,0 +1,20 @@
+<table>
+
+<%= form_for(@service) do |f| %>
+  <div class="field">
+    <%= f.label :tipo %><br />
+    <%= f.text_field :tipo, :size => 51%>
+  </div>
+  <div class="field">
+    <%= f.label :descripcion %><br />
+    <%= f.text_area :descripcion, :rows => 3, :cols => 40 %>
+  </div>
+  <div class="field">
+    <%= f.label :tarifa %><br />
+    <%= f.text_field :tarifa, :size => 20 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+</table>

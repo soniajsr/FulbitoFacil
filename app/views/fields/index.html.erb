@@ -1,0 +1,32 @@
+<div id="product_list" >
+	<h1>Lista de Canchas de Fulbito</h1>
+
+	<table>
+	<% @fields.each do |field| %>
+	<tr class="<%= cycle('list_line_odd', 'list_line_even') %>" >
+		<td>
+			<%= image_tag(field.imagen, :class => 'list_image') %>
+		</td>
+
+		<td class="list_description" >
+			<dl
+				<dt><b><%= field.nombre %></b></dt>
+				<dd><%= truncate(strip_tags(field.caracteristicas), :length => 88) %></dd>
+			</dl>
+		</td>
+
+		<td class="list_actions" >
+			<%= link_to 'Mostrar', field %><br/>
+			<%= link_to 'Editar', edit_field_path(field) %><br/>
+			<%= link_to 'Eliminar', field, confirm: 'Esta seguro?', method: :delete %>
+		</td>
+		
+  </tr>
+<% end %>
+</table>
+</div>
+
+<br />
+
+<%= link_to 'Agregar Cancha de Fulbito', new_field_path %>
+<p><%= will_paginate @orders %></p>

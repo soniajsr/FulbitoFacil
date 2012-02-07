@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fulbito Facil</title>
+  <%= stylesheet_link_tag "scaffold" %>
+  <%= stylesheet_link_tag    "application" %>
+  <%= stylesheet_link_tag "stylesheet", :media => "all" %>
+  <%= javascript_include_tag :defaults %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<div id="holder">
+	<!--BEGIN OF TERMS OF USE. DO NOT EDIT OR DELETE THESE LINES. IF YOU EDIT OR DELETE THESE LINES AN ALERT MESSAGE MAY APPEAR WHEN TEMPLATE WILL BE ONLINE-->
+	<div id="copy" style="height: 75px; position: absolute; bottom: 0px; left:0px; border: none; width: 100%;">
+		<div id="free-flash-header" style="width:820px;margin:0 auto;text-align:right;position:relative;bottom:0px;margin-top:63px;color:#C2CAE0;font-size:10px;font-family:Verdana">JACAG</div>																			 
+	</div>	
+	<!--END OF TERMS OF USE-->		
+	<div id="body_bottom_bgd">
+			<div id="page">
+				<div id="left_col">																																			
+					<div id="logo">
+					<%= image_tag("logo.jpg") %>					<h1><span class="blue">GRUPO</span><b> JACAG S.A </b></h1></div>
+										
+					<div class="clearboth"></div>	
+
+					
+					<!-- Menu --><br /><br />
+<table ><tr><td>
+ <div id="right_col">
+<h1><a href="http://localhost:3000/fields" >Home</a></h1>
+<h1><a href="http://localhost:3000/owners" >Propietarios</a></h1>
+<h1><a href="http://localhost:3000/customers" >Clientes</a></h1>
+<h1><a href="http://localhost:3000/locals" >Locales</a></h1>
+<h1><a href="http://localhost:3000/fields" >Canchas de Fulbito</a></h1>
+<h1><a href="http://localhost:3000/services" >Servicios</a></h1>
+<h1><a href="http://localhost:3000/publicities" >Publicidad</a></h1>
+</div>
+</td></tr></table>
+ 
+					<!-- Menu end-->			
+								<br/><br/>
+								<!--div class="news">
+									<h1>Recent News</h1>
+									<span class="bold">01.02.2009</span><br/>
+									Praesent dignissim, lectus pharetra blandit cursus, urna nibh sagittis nulla, et pellentesque.<br/> Lorem sapien vel neque. Maecenas auctor.Praesent dignissim, lectus pharetra blandit cursus.Praesent dignissim, lectus pharetra blandit cursus, urna nibh sagittis nulla, et pellentesque lorem sapien vel neque. Maecenas auctor.Praesent dignissim, lectus pharetra blandit cursus .
+									<a href="#" class="right">read more</a>
+								</div-->																							
+				</div>
+				<div id="right_col">
+								<div id="header"><span class="blue">CANCHAS DEPORTIVAS</span><b> FULBITO FACIL</b></div>
+								<div id="left_bgd">																									
+											<div id="header_id"></div>
+											
+											 <%= image_tag("el_clasico.jpg") %>		
+											<div id="firefoxbug"><!-- firefoxbug -->
+													<div id="blue_line"></div>
+															<div class="dynamicContent" >
+															<%= yield %>
+															</div>
+											</div><!--end firefoxbug-->											
+								</div><!--end left_bgd-->
+								
+				</div><!--end right_col-->
+				
+				<div class="clearboth"></div>	
+			</div>
+			<div id="copyright">Copyright &copy; 2012 JACAG S.A.</div>
+	</div>
+<br/>
+</div>
+</body>
+</html>

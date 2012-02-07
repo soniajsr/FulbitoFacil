@@ -1,0 +1,52 @@
+<%= form_for(@field) do |f| %>
+  <% if @field.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@field.errors.count, "error") %> prohibited this field from being saved:</h2>
+
+      <ul>
+      <% @field.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :nombre %><br />
+    <%= f.text_field :nombre, :size => 20 %>
+  </div>
+  <div class="field">
+    <%= f.label :caracteristicas %><br />
+    <%= f.text_area :caracteristicas, :rows => 3, :cols => 40 %>
+  </div>
+  <div class="field">
+    <%= f.label :dia %><br />
+    <%= f.text_field :dia, :size => 20 %>
+  </div>
+  <div class="field">
+    <%= f.label :horas_atencion %><br />
+    <%= f.number_field :horas_atencion %>
+  </div>
+  <div class="field">
+    <%= f.label :tarifa %><br />
+    <%= f.text_field :tarifa %>
+  </div>
+  <div class="field">
+    <%= f.label :turno %><br />
+	<%= f.text_field :turno %>
+  </div>
+  <div class="field">
+    <%= f.label :promocion %><br />
+    <%= f.text_area :promocion, :rows => 3, :cols => 40 %>
+  </div>
+  <div class="field">
+    <%= f.label :imagen %><br />
+    <%= f.text_field :imagen %>
+  </div>
+   <div class="field">
+    <%= f.label :local %><br />
+	<%= f.select :local_id, Local.all.collect{|a| [a.descripcion,a.id]}, :prompt => "--Seleccionar--", :cols => 40 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
